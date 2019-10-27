@@ -5,10 +5,26 @@
   "main": "index.js",
   "author": "Gokul",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack-dev.config.js --port 3000"
+  },
   "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "4.3.1",
+    "css-loader": "^3.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "scss-loader": "^0.0.1",
+    "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   }
 }

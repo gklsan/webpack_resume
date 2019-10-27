@@ -22,7 +22,11 @@ Add gitignore and add the following lines
     echo '.idea*' >> .gitignore
     echo 'node_modules' >> .gitignore
 
+Add webpack-dev.config.js
+
 Add the following libraries
 
-- `yarn add react react-dom webpack webpack-cli`
-- `yarn install`
+    yarn add react react-dom webpack webpack-cli
+    yarn install
+    yarn add webpack-dev-server @babel/core babel-loader @babel/preset-env @babel/preset-react  html-webpack-plugin html-loader
+    yarn add react-bootstrap bootstrap css-loader scss-loader
