@@ -1,5 +1,5 @@
 import React from "react";
-import { Steps, Divider } from 'antd';
+import { Steps, Icon } from 'antd';
 import AboutMe from './AboutMe'
 import Education from "./Education";
 import Skills from "./Skills";
@@ -17,7 +17,7 @@ const stepStyle = {
 
 class Navbar extends React.Component {
   state = {
-    current: 1,
+    current: 0,
   };
 
   onChange = current => {
@@ -49,7 +49,13 @@ class Navbar extends React.Component {
           <Step title="Skills" />
           <Step title="Experience" />
         </Steps>
-        { this.renderStep(current)}
+        <div className='row'>
+          { current >0 ? <div className='col-1 align-self-center'> {<Icon type="arrow-left" />} </div> : <div className='col-1' /> }
+          <div className='col-10'>
+            { this.renderStep(current)}
+          </div>
+          { current < 3 && (<div className='col-1 align-self-center'>  {<Icon type="arrow-right" />} </div>) }
+        </div>
       </div>
     );
   }
