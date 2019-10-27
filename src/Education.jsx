@@ -2,6 +2,7 @@ import React from "react";
 import { Timeline, Typography } from "antd";
 import Paragraph from "antd/lib/typography/Paragraph";
 const { Title } = Typography;
+
 const Education = () => {
   return(
     <Timeline>
@@ -20,7 +21,6 @@ const Education = () => {
         <Paragraph>Affliated with anna university Kovai</Paragraph>
       </Timeline.Item>
       <Timeline.Item dot={' '}/>
-
 
     </Timeline>
   )
