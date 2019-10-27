@@ -30,3 +30,11 @@ Add the following libraries
     yarn install
     yarn add webpack-dev-server @babel/core babel-loader @babel/preset-env @babel/preset-react  html-webpack-plugin html-loader
     yarn add react-bootstrap bootstrap css-loader scss-loader
+    yarn install
+    
+    
+Adding Ant design
+
+    yarn add antd
+    yarn add @babel/plugin-proposal-class-properties
+    

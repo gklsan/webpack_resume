@@ -11,6 +11,13 @@ module.exports = {
         }
       },
       {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: ['style-loader', 'sass-loader'],
@@ -37,6 +44,9 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new HtmlWebPackPlugin({
