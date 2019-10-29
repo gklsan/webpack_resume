@@ -3,8 +3,8 @@ import { Timeline } from "antd";
 
 const Skills = () => {
   return(
-    <div>
-      <Timeline>
+    <div className='row'>
+      <Timeline className='col-5'>
         <Timeline.Item>Ruby</Timeline.Item>
         <Timeline.Item>Rails</Timeline.Item>
         <Timeline.Item>ReactJS</Timeline.Item>
@@ -17,6 +17,8 @@ const Skills = () => {
         <Timeline.Item>Docker</Timeline.Item>
         <Timeline.Item>Coffeescript</Timeline.Item>
         <Timeline.Item>ECMAScript</Timeline.Item>
+      </Timeline>
+      <Timeline className='col-5'>
         <Timeline.Item>RSpec</Timeline.Item>
         <Timeline.Item>Selenium-Webdriver</Timeline.Item>
         <Timeline.Item>Sidekiq</Timeline.Item>

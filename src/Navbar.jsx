@@ -17,13 +17,17 @@ const stepStyle = {
 
 class Navbar extends React.Component {
   state = {
-    current: 0,
+    current: 2,
   };
 
   onChange = current => {
     console.log('onChange:', current);
     this.setState({ current });
   };
+
+  onIncrease = current => this.setState({current: current + 1});
+
+  onDecrease = current => this.setState({current: current - 1});
 
   renderStep = (current) => {
     console.log(current)
@@ -50,11 +54,11 @@ class Navbar extends React.Component {
           <Step title="Experience" />
         </Steps>
         <div className='row'>
-          { current >0 ? <div className='col-1 align-self-center'> {<Icon type="arrow-left" />} </div> : <div className='col-1' /> }
+          { current >0 ? <div className='col-1 align-self-center' onClick={() => this.onDecrease(current)}> {<Icon type="left-circle" style={{fontSize: '2rem'}} theme="filled" />} </div> : <div className='col-1' /> }
           <div className='col-10'>
             { this.renderStep(current)}
           </div>
-          { current < 3 && (<div className='col-1 align-self-center'>  {<Icon type="arrow-right" />} </div>) }
+          { current < 3 && (<div className='col-1 align-self-center' onClick={() => this.onIncrease(current)}>  {<Icon type="right-circle" style={{fontSize: '2rem'}} theme="filled" />} </div>) }
         </div>
       </div>
     );
